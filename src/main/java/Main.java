@@ -3,7 +3,7 @@ import io.javalin.Javalin;
 public class Main {
     public static void main(String[] args) {
         Javalin app = Javalin.create();
-        app.get("/:firtvariable/:action/:secondvariable", context -> {
+        app.get("/:firstvariable/:action/:secondvariable", context -> {
             context.result("Answer is " + calculate(Integer.parseInt(context.pathParam("firstvariable")), Integer.parseInt(context.pathParam("secondvariable")), context.pathParam("action")));
         });
         app.get("/JuiceEye", context -> {
